@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS8 - 테이블 요소</title>
+    <script src="../JavaScript/JS8.js" defer></script>
+</head>
+
+<style>
+    div {
+        box-sizing: border-box;
+        cursor: pointer;
+        background-color: #D1D1D1;
+        margin: 1rem 0;
+    }
+    div:hover {
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+    <div id="caption" onclick="setting_caption()">
+        <label>Setting Table Name : <input type="text"></label>
+    </div>
+    <div id="add-cell">
+        <span>= Add Data =</span><br>
+        <label>Column Num : <input type="number"></label>
+        <label>Row Num : <input type="number"></label>
+        <label>Content : <input type="text"></label>
+        <button onclick="add_cell()">Insert</button>
+    </div>
+    <div id="del-cell">
+        <span>= Delete Data =</span><br>
+        <label>Column Num : <input type="number"></label>
+        <label>Row Num : <input type="number"></label>
+        <button onclick="del_cell()">Delete</button>
+    </div>
+    <div id="up-cell">
+        <span>= Update Data =</span><br>
+        <label>Column Num : <input type="number"></label>
+        <label>Row Num : <input type="number"></label>
+        <label>Content : <input type="text"></label>
+        <button onclick="up_cell()">Update</button>
+    </div>
+
+
+    <table border="1">
+        <thead>
+        <tr>
+            <td>title</td>
+            <td>author</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>test1</td>
+            <td>tester1</td>
+        </tr>
+        <tr>
+            <td>test2</td>
+            <td>tester2</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

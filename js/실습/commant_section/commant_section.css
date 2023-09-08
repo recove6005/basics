@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.commant_input_wrap {
+    margin: 50px auto;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid lightsteelblue;
+    border-radius: 5px;
+}
+
+.commant_head {
+    width: 600px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.input_nickname {
+    margin: auto 100px auto 20px;
+    width: 200px;
+    height: 30px;
+    border: 3px solid lightsteelblue;
+    border-radius: 30px;
+    padding: 0 10px;
+    color: steelblue;
+}
+
+.commant_count {
+    line-height: 30px;
+    color: steelblue;
+    width: 100px;
+    height: 30px;
+    margin: auto 0;
+}
+
+.on_off_btn {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto 20px;
+    border: 3px solid lightsteelblue;
+    border-radius: 30px;
+    color: steelblue;
+    text-decoration: none;
+}
+.on_off_btn:hover {
+    background-color: lightsteelblue;
+    color: whitesmoke;
+}
+
+.commant_middle {
+    margin: 0 auto;
+    width: 550px;
+    height: 170px;
+    resize: none;
+    border: 3px solid lightsteelblue;
+    border-radius: 5px;
+    color: steelblue;
+}
+
+.commant_foot {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.char_count {
+    width: 420px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto 20px;
+    color: steelblue;
+
+}
+
+.write_btn {
+    margin: auto 0;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid lightsteelblue;
+    border-radius: 30px;
+    color: steelblue;
+}
+
+.write_btn:hover {
+    color: whitesmoke;
+    background-color: lightsteelblue;
+}
+
+.commant_section_wrap {
+
+}
+
+.commant_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.commant_item {
+    width: 600px;
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid lightsteelblue;
+    border-radius: 5px;
+}
+
+.commant_item_head {
+    margin: 20px 20px;
+}
+.commant_nickname {
+    float: left;
+    width: 200px;
+    height: 30px;
+    color: steelblue;
+
+}
+.commant_delete {
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 3px solid lightsteelblue;
+    color: steelblue;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.commant_delete:hover{
+    background-color: lightsteelblue;
+    color: whitesmoke;
+}
+.commant_item_middle {
+    margin: 20px 20px;
+    color: steelblue;
+
+
+}
+
+.hidden_item {
+    visibility: hidden;
+}

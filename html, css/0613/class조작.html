@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class 조작하기</title>
+</head>
+<style>
+    .string{
+        font-size: 3rem;
+        color: blue;
+    }
+    .box{
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background-color: aliceblue;
+    }
+</style>
+<body>
+    <a class="a b c d e" href="#">TEST LINK</a>
+    <span class="string">그냥 글자</span>
+    <input type="text">
+    <input type="text">
+    <input type="button" value="버튼">
+</body>
+</html>
+
+<script>
+    const [a, span, input1, input2, input3] = document.body.children;
+    // a.className = 'a box';
+    let aList = a.classList;
+    let cExist = aList.contains('c');
+    console.log('c 라는 이름의 클래스가 포함되어있는가?:', cExist);
+    aList.add('box'); //해당 요소에 새로운 클래스(box)를 추가한다
+    aList.add('box'); //기존에 같은 클래스가 존재한다면 추가되지 않는다
+    aList.remove('c'); //해당 요소에 존재하는 클래스를 삭제한다
+    span.classList.remove('string');
+    // 해당 요소에 해당 클래스가 존재하면 삭제, 존재하지 않으면 추가
+    input1.classList.toggle('string');
+
+</script>
+
+
+

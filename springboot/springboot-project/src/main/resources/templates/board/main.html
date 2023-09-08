@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <title>게시판</title>
+</head>
+<body>
+
+<!--일반 주석-->
+<!--/* 타임리프 주석 */-->
+<h1>게시판!</h1>
+<table border="1" width="500" align="center">
+    <thead>
+    <tr align="center">
+        <td>번호</td>
+        <td>제목</td>
+        <td>작성자</td>
+        <td>작성일</td>
+        <td>조회수</td>
+    </tr>
+    </thead>
+
+    <tbody align="center">
+        <tr th:each="board, meta: ${boards}">
+            <td>[[${index.count}]]</td>
+            <td><a th:href="@{|/board/view?no=${board.no}|}" th:text="${board.title}"></a></td>
+            <td th:text="${board.userID}"></td>
+            <td th:text="${board.writeDate}"></td>
+            <td>[[${board.count}]]</td>
+        </tr>
+    </tbody>
+</table>
+
+<div align="center">
+    <a href="/board/insert">글쓰기</a>
+</div>
+</body>
+</html>

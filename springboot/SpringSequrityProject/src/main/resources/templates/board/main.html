@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Main</title>
+</head>
+<body>
+
+  <button sec:authorize="isAuthenticated()">Logout</button>
+
+  <h1>Here is board main.</h1>
+  <table border="1" width="300">
+    <thead>
+      <tr>
+        <td>No</td>
+        <td>Title</td>
+        <td>Writer</td>
+        <td sec:authorize="isAuthenticated()">Delete</td>
+<!--        <td th:if="${#authentication.isAuthenticated()}">Delete</td>-->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>No 1 post</td>
+        <td>james</td>
+        <td><button>delete</button></td>
+        <td sec:authorize="isAuthenticated()">
+<!--          작성자와 로그인한 유저의 이름이 같으면 delete버튼 생성-->
+          <button th:if="${#authentication.name} == 'james'">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>No 2 post</td>
+        <td>tom</td>
+        <td><button>delete</button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>No 3 post</td>
+        <td>tom</td>
+        <td><button>delete</button></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>No 4 post</td>
+        <td>james</td>
+        <td><button>delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

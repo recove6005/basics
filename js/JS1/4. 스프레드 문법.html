@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>스프레드 문법(정계문법)</title>
+</head>
+<script>
+
+  // ES6 부터 사용 가능.
+  // 전개 문법이란 뜻으로, 여러 값들의 집합을 전개, 분산하여 개별적인 값들의 목록으로 만듦.
+  // 대상은, Array, String, Map, Set, DOM 컬렉션(NodeList, HTMLCollection), arguments
+  // 와 같이 for ... of 문으로 순회할 수 있는 iterable 객체
+  // '...' 을 사용
+  console.log(...[1,2,3]); // 1 2 3
+  console.log(...'hello'); // h e l l o
+  // console.log(...{a: 1, b: 2}); // error!
+  //var list = ...[1,2,3]; //error! 스프레드 문법의 결과는 어떤 값(data)가 아니기 때문
+
+  // 응용편 - 배열 리터럴 내부에서의 사용
+  var arr1 = [1, 4];
+  var arr2 = [2, 3];
+  var arr3 = [1, ...arr1, ...arr2, 4];
+  console.log(arr3);
+
+  // 응용편 - splice()
+  arr1.splice(1, 0, arr2);
+  console.log(arr1); // 전개하지 않으면 arr2 배열 자체가 대입됨.
+  arr1.splice(1,0, ...arr2);
+  console.log(arr1);
+
+  // 만약  ES6 이상을 사용하지 못할 경우 apply를 사용.
+  Array.prototype.splice.apply(arr1, [1,0].concat(arr2));
+  console.log(arr1);
+
+  // 응용편 - 배열 복사
+  var origin = [1,2];
+  var copy = origin;
+  console.log(origin === copy); // true
+  var copy = origin.slice(); // ~ES5 까지
+  console.log(origin === copy); // false
+  var copy = [...origin];
+  console.log(origin === copy); // false
+
+  //응용편 - 객체의 병합
+  var obj = {x: 1, y: 2};
+  var newObj = {x: 1, y: 2};
+  //obj와 newObj를 합치려면...?
+  var newObj = {obj, y : 100};
+  console.log(newObj); // 객체 안에 객체가 들어있는 형태.
+
+  var newObj = {...obj, y: 100};
+  console.log(newObj);
+  // 동일한 프로퍼티명이 있는 경우, 뒤에 위치한 값이 우선권을 가짐.
+
+  var newObj = Object.assign({}, obj, {y:10, z: 3});
+  console.log(newObj);
+
+
+  /**** 단축 평가 ****/
+  // 논리 연산자를 사용한 단축 평가
+  // 논리합(||) 또는 논리곱(&&) 연산자 표현식은 언제나 2개의 피연산자 중 어느 한쪽으로 평가됨.
+  // null, undefined는 false로 간주.
+  console.log(!!null == false);
+  console.log(!!undefined == false);
+  console.log(null == false); // false
+  console.log(1 === 1 || 2 === 3);
+  console.log('Cat'); // Cat
+  console.log('Cat' && 'Dog'); // 'Dog'
+  console.log('Cat' || 'Dog'); // 'Cat'
+
+  // true || anything => true
+  // false || anything => anything
+  // true && anything => anything
+  // false && anything => false
+  let test = 'Cat' && 'Dog'; // 'Dog'
+  console.log(test);
+
+
+  /**** 옵셔널 체이닝 연산자 (? .) ****/
+  // 좌항의 피연산자가 null 또는 undefined의 경우 undefined를 반환.
+  // 그렇지 않다면 우항의 프로퍼티를 참조.
+          // ?.
+
+  var element = null;
+  // null에서 프로퍼티를 가져오려 할 때
+  // var val = element.value; // error!
+  var val = element?.value; // value는 element에 있는 value 프로퍼티를 의미함.
+  console.log('val : ' , val);
+  var element = {value: 123};
+  var val = element?.value;
+  console.log('val : ', val);
+
+  // 0 혹은 '' (빈문자열) 은 객체로 평가될 때도 있다.
+  var str = '';
+  console.log(!!str); // false
+  var length = str && str.length; // str
+  console.log(length); // ''
+  // 옵셔널 체이닝은 좌항이 false로 평가되는 값이라도
+  // null/undefined가 아니면 프로퍼티를 가져 올 수 있다.
+  var lenth = str?.length;
+  console.log(lenth); // 0
+
+  /*** null 병합 연산자 ***/
+  // 좌항의 피연산자가 null 또는 undefined인 경우 우항을 반환
+  // 그렇지 않으면 좌항 반환
+  // ??
+  var foo = null ?? 'default string'; //좌항이 null이기 때문에 우항 문자열 반환
+  console.log(foo);
+  var foo = '' || 'string';
+  console.log(foo); // ''가 false기 때문에
+  var foo = '' ?? 'string';
+  console.log(foo); // ''가 null 또는 undefined가 아니기 때문
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+GET http://localhost:8080/comment/korea
+
+#요청 분리 : ###
+###
+POST http://localhost:8080/comment/
+Content-Type: application/json
+
+# 한 칸 띄우지 않으면 header에 포함한 정보로 인식
+{
+  "userId": "test-request",
+  "text": "This is test request."
+}
+
+###
+PUT http://localhost:8080/comment/2
+Content-Type: application/json
+
+{
+  "text": "Changed text contents."
+}
+
+###
+DELETE http://localhost:8080/comment/2

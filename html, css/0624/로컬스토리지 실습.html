@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로컬스토리지 실습</title>
+</head>
+<body>
+    <div>UNTITLED</div>
+    <textarea cols="10" rows="2">내용적기</textarea>
+    <button>저장</button>
+</body>
+</html>
+<script>
+    const button = document.querySelector('button');
+    const textarea = document.querySelector('textarea');
+    const div = document.querySelector('div');
+
+    function set_localStorage_item(key, value){
+        // 로컬스토리지에 데이터를 저장한다
+        localStorage.setItem(key, value);
+        // 현재 제목을 입력받은 제목으로 변경한다
+        div.textContent = key;
+    }
+
+    button.onclick = () => {
+        let key = div.textContent;
+        let value = textarea.value;
+
+        if(key === 'UNTITLED'){
+            key = prompt('제목을 입력해주세요');
+            if(key !== null && key !== ''){
+                // 이미 해당 제목으로 저장되어있는 데이터가 없다면
+                if (localStorage.getItem(key) === null){
+                    set_localStorage_item(key, value);
+                }
+                // 기존에 존재하는게 있었다면
+                else if(confirm('덮어쓰시겠습니까?')){
+                    set_localStorage_item(key, value);
+                }
+            }
+        }
+        // 제목이 설정되어 있는 상태이다
+        else if(confirm('덮어쓰시겠습니까?')){
+            set_localStorage_item(key, value);
+        }
+    }
+
+
+
+</script>
+
+
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="defaultFetchSize" value="100"/>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="BoardDTO" type="com.example.boot.dtos.BoardDTO"/>
+        <typeAlias alias="FileDTO" type="com.example.boot.dtos.FileDTO" />
+        <typeAlias alias="UserDTO" type="com.example.boot.dtos.UserDTO" />
+        <typeAlias alias="FileVO" type="com.example.boot.vos.FileVO" />
+        <typeAlias alias="CommentDTO" type="com.example.boot.dtos.CommentDTO" />
+    </typeAliases>
+</configuration>

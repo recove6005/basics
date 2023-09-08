@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가상 선택자</title>
+</head>
+<style>
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:visited{
+        color: #FF0000;
+    }
+    a:hover{
+        color: blue;
+    }
+    a:active{
+        color: brown;
+    }
+    input:active{
+        background-color: black;
+        color: white;
+    }
+    input:focus{
+        font-weight: bold;
+        color: green;
+        font-size: large;
+    }
+    img:target{
+        width: 2rem;
+    }
+    input:checked{
+        width: 3em;
+    }
+</style>
+<body>
+    <a href="https://www.naver.com">클릭하지마시오</a> <br/>
+    <a href="https://www.naver.com">클릭해보시오</a> <br/>
+    <a href="#img">앵커</a> <br/>
+    <input type="button" value="단순 버튼"><br/>
+    <label>입력: <input type="text"></label> <br/>
+    A <input type="checkbox"> <br/>
+    B <input type="checkbox"> <br/>
+    C <input type="checkbox"> <br/>
+    <img id="img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MTJfMTE0%2FMDAxNjgzODk4NzI2NTc5.qMmUy5ou_N07yz-BvPjBsm0tC2O_JRQPDvfaXjbqKwog.ZbMia1Ln-8Ox0ARPPHtmQwql7g1EvR5SSbpO44GuFRog.JPEG.01ekdp%2FIMG_2550.jpg&type=sc960_832" alt="이미지"> <br/>
+</body>
+</html>
+
+
+
+
+
+

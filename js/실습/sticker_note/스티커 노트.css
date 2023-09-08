@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#sticker_wrap {
+    box-sizing: border-box;
+    border: 3px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+/* 스티커 노트 전체 */
+.sticker_note {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    font-size: 1.3rem;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.sticker_note:hover {
+    opacity: 1;
+}
+
+.sticker_note > .top_nav {
+    line-height: 32px;
+}
+
+.sticker_note > .top_nav a {
+    display: inline-block;
+    padding: 0 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.sticker_note > .top_nav a:hover {
+    color: white;
+    background-color: #333;
+}
+
+.sticker_note .top_nav .inner_right_nav {
+    float: right;
+}
+
+/* 텍스트 에리어 */
+.sticker_note > textarea {
+    width: inherit;
+    height: inherit;
+    margin: 0; padding: 10px;
+    box-sizing: border-box;
+    background-color: lightgoldenrodyellow;
+    resize: none;
+    border: none;
+}
+
+/* 오른쪽 노트 리스트 */
+.list_wrap {
+    float: right;
+    width: 30rem;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 3px solid black;
+    background-color: #FF01;
+    font-size: 1.6rem;
+}
+
+.list_wrap nav {
+    background-color: #333333;
+    height: 50px;
+    line-height: 50px;
+}
+
+.list_wrap > nav a {
+    display: inline-block;
+    width: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.list_wrap > nav a:hover {
+    color: indianred;
+}
+
+.list_wrap > div {
+    padding: 6px 14px;
+}
+
+.list_wrap input {
+    border: none;
+    border-radius: unset;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.4rem;
+}
+
+
+/* 사이드 바 */
+.sticker_note_color {
+    display: flex;
+    height: 30px;
+}
+
+.sticker_note_color > span {
+    flex: 1;
+    border: 1px solid rgba(0,0,0,0.6);
+}
+
+.sticker_note_color > span:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.sticker_note > .side_nav {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    box-sizing: border-box;
+    overflow: auto;
+    list-style: none;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+}
+
+.sticker_note > .side_nav[active] {
+    left: 0;
+}
+
+.sticker_note > .side_nav li {
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.9);
+}
+
+.sticker_note > .side_nav li:hover {
+    background-color: black;
+}
+
+.side_add_btn {
+    margin: auto 10px;
+}

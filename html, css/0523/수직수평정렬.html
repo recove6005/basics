@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>수직 수평 정렬</title>
+</head>
+<style>
+  .container {
+    background-color: black;
+    color: white;
+    margin: 1rem 0;
+  }
+
+  /*인라인 요소 중앙 정렬*/
+  #inline-container {
+    height: 3rem;
+    /* 인라인 요소 수평 정렬 : 정렬 대상 요소의 부모(section)에 적용 */
+    text-align: center;
+  }
+  #inline-container > span {
+  }
+
+  /*블록 요소 중앙 정렬*/
+  #block-container {
+    height: 3rem;
+  }
+  #block-container>div {
+    /* 블록 요소 수평 정렬 : 대상 요소에 width를 부여한 후, margin 좌우를 auto로 설정 */
+    /* width만큼 중앙 정렬 */
+    width: 200px;
+    margin: 0 auto;
+    background-color: blue;
+    /*text까지 중앙정렬 하려면 text-align으로 설정*/
+    /*text-align: center*/
+  }
+
+  /* 여러 개의 블록 요소를 중앙 정렬 */
+  /* 자식 요소의 div에 display를 inline-block으로 지정하여 인라인 요소처럼 취급 */
+  /* 부모 요소에 인라인 요소를 정렬하는 text-align: center;를 부여 */
+  /*혹은 부모 요소에 display:flex; justify-content: center;*/
+  #blocks-container {
+    text-align: center;
+  }
+  #blocks-container > div {
+    background-color: red;
+    display: inline-block;
+  }
+
+
+
+  /* 인라인 요소의 수직 정렬*/
+  #inline-container2 {
+    /* 첫 번째 방법.
+      부모 요소에서 padding으로 위 아래 좁히기. */
+    height: 100px;
+    padding: 100px 0;
+
+    /*두 번째 방법.
+      부모 요소에 height를 부여한 후, line-height를 동일하게 설정*/
+    /*문자열이 여러 줄일 경우 x*/
+    /*line-height: 50px;*/
+    /*height: 50px;*/
+  }
+  #inline-container2>span {
+    background-color: blue;
+  }
+
+  /* 블록 요소의 수직 정렬 */
+  #block-container2 {
+    /*부모에게 position을 줘야 함.(자식 요소가 absolute이기 때문)*/
+    position: relative;
+    height: 100px;
+  }
+  #block-container2>div {
+    background-color: blue;
+    height: 50px;
+
+    /*부모 요소를 기준으로(absolute) 중앙으로 이동(top: 50%)*/
+    position: absolute;
+    top: 50%;
+
+    /*자신의 height의 반만큼 다시 위로 이동*/
+    margin-top: -25px;
+
+    /* height가 없을 경우, transfrom: translateY(-50%); */
+  }
+
+  /*부모 요소에 display: flex;*/
+  /*수평 정렬 : justify-content: center;*/
+  /*수직 정렬 : align-items: center;*/
+  /*를 부여하면 가장 쉬움*/
+
+
+
+
+  #block-container3 {
+    height: 200px;
+  }
+  #block-container3>div{
+    display: inline-block;
+    background-color: blue;
+  }
+  #block-container3>div:first-child {
+    height: 100%;
+  }
+  #block-container3>div:nth-child(2) {
+    vertical-align: middle;
+  }
+
+</style>
+<body>
+  <h1>수평 정렬</h1>
+  <section class="container" id="inline-container">
+      <span>inline 요소</span>
+  </section>
+
+  <section class="container" id="block-container">
+      <div>block 요소</div>
+  </section>
+
+  <section class="container" id="blocks-container">
+    <div>block 요소</div>
+    <div>block 요소</div>
+    <div>block 요소</div>
+  </section>
+
+  <h1>수직 정렬</h1>
+  <section class="container" id="inline-container2">
+    <span>inline 요소</span>
+  </section>
+
+  <section class="container" id="block-container2">
+    <div>block 요소</div>
+  </section>
+
+  <section class="container" id="block-container3">
+    <div>요소1</div>
+    <div>요소2</div>
+    <div>요소3</div>
+  </section>
+</body>
+</html>

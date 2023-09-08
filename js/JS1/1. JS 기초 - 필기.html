@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // 한 줄 주석
+    /* 여러 줄 주석 */
+    // 변수 생성 시 const, let, var 을 변수 명 앞에 붙임.
+    var1 = 1; // 같은 이름의 변수 재정의 불가
+    console.log('var1 : ' + var1 + 2); // 'var1 : ' 때문에 뒤의 숫자들를 문자열로 변환
+    console.log('var1 : ' , var1, 2); // 문자열은 검정색, 숫자는 파란색으로 데이터 표현
+
+    // const : 상수 정의, 변경할 수 없는 변수
+    const var2 = 2;
+
+    // let : 변수 초기화 없이, 나중에 값을 넣어줘도 됨. (undefined)
+    let var3;
+    console.log(var3);
+    var3 = 50;
+    console.log('var3 : ', var3);
+    var var4 = 4;
+    console.log('var4 : ' , var4);
+    var var4 = 10;
+    console.log('var4 : ' , var4);
+    // 같은 이름의 변수 재정의가 가능하다. -> let, const와 다른 점.
+    // var보다 let과 const를 쓰는 게 좋음.
+
+    a = 10;
+    b = 20;
+    c = "여기는 " + "문자열 입니다";
+    d = '여기는 \n\"문자열\" 입니다';
+    // 아스키코드표 문자들 \n \"
+    // f12 콘솔로 지정한 변수는 일시적인 것
+
+    console.log(a + b);
+    console.log(c);
+    console.log(d);
+
+    //문자열을 숫자로 변환하기
+    let s = '2';
+    let result = s + 3;
+    console.log(result);
+    result = s - 3;
+    console.log(result); // 문자열에서 - 연산을 하면 문자열을 숫자로 변환함.
+
+    // 1) 문자열 - 0
+    s = s - 0;
+
+    // 2) 변수 앞에 + 붙이기
+    result = +s;
+
+    // 3) Number 객체 사용
+    result = Number.parseInt(s);
+
+    // 논리값으로 변환
+    let check = 1;
+    console.log(check); // 1
+    console.log(!check); // false
+    console.log(!!check); // true
+
+    let name = 5000;
+    let c1 = {
+        age : 1000,
+        name : 'eden',
+        5000: 'test'
+    };
+    console.log(c1);
+    console.log(c1.age);
+    console.log(c1[name]); // 5000으로 인식하여 test 출력.
+    console.log(c1['name']); // name으로 인식해서 eden 출력.
+
+    c1.new = 'new value';
+    console.log(c1);
+    // .new 생성된 객체에 새로운 값 추가
+    // 기존의 동일한 이름의 프로퍼티가 있을 시 변경
+    delete c1.new; // 해당 프로퍼티 쌍을 삭제할 경우  // 삭제된 프로퍼티는 undefined.
+    console.log(c1.new);
+
+    result = name in c1; // result에 true(name값이 있음) 또는 false(name값이 없음)가 저장
+    console.log(result);
+
+
+
+
+
+    /**** 조건문 ****/
+    //결과가 true or false인 구문에 대해 원하는 처리를 하는 것 (분기)
+    let number = 10;
+    if(number < 5) {
+        console.log('if true');
+    }
+    else if(number === '10') {
+        // a == b : a와 b가 같은지 검사 (형변환이 가능하면 형변환 후 검사)
+        // a === b : a 와 b가 같은지 검사 (형변환 하지 않고 그대로 검사)
+        // if(number == '10') --> true
+        // if(number === 10) --> false
+        console.log('first else');
+    }
+    else {
+        console.log('last else')
+    }
+
+    number = 0; // 0이면 false, 그 외의 값은 true
+    if(number) {
+        console.log(true);
+    }
+    else {
+        console.log(false);
+    }
+
+    //switch
+    let say = "hi";
+    switch(say) {
+        case "hello":
+            console.log('Say is hello.');
+            break;
+        case "hi" :
+            console.log('Say is hi.');
+            break;
+        case 'gonichiwa' :
+            console.log('Say is gonichiwa.');
+            break;
+        default :
+            console.log('Say is nothing.');
+    }
+
+
+
+
+
+    /**** 반복문 ****/
+    while(number < 5) {
+        console.log(number);
+        number++;
+        //number--;
+        //++number; --number;
+        // number += 1; number -= 1;
+    }
+    number = 0;
+
+    for(let i = 0; i < 5; i++) {
+        number = i;
+        if(i%2 == 0) {
+            break; // 실행 즉시 for문 종료
+        }
+        continue; // 아래의 log 명령을 실행하지 않고 for문으로
+        console.log(number + " hay!");
+    }
+    number = 0;
+
+    //break; continue;
+    // foreach => for - in, for -of
+    // try catch,finally - throw
+
+
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+li{
+    display: inline-block;
+    margin: 0 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+li > a{
+    text-decoration: none;
+    color: black;
+}
+li > a:link{
+    color: black;
+}
+li > a:visited{
+    color: red;
+}
+li > a:hover{
+    color: white;
+    background-color: black;
+}
+li > a:active{
+    color: #0066FF;
+}
+
+
+main > div{
+    margin: 1.6rem auto;
+    padding: 0 0.5rem;
+    padding-bottom: 2.3rem;
+    border: 2px solid black;
+    border-radius: 0.25rem;
+    width: 30rem;
+}
+
+main > div:target{
+    background-color: mediumaquamarine;
+}
+
+main > div:target > h3{
+    color: purple;
+}
+

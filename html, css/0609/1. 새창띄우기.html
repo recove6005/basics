@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>새창띄우기</title>
+</head>
+<script>
+    function open_window(){
+        window.open('https://google.com', 'popup',
+            'width=400,height=600,top=100,left=10,scrollbars=no,resizable=no,location=no');
+    }
+
+    function change_data(){
+        location.href = 'http://localhost:63342/WebStorm%20KSW/JS/230609/1.%20%EC%83%88%EC%B0%BD%EB%9D%84%EC%9A%B0%EA%B8%B0.html?_ijt=es17f25thdgrrkvc0fr3n345na&_ij_reload=RELOAD_ON_SAVE'
+        // replace: 이력에 안남고 이동
+        // location.replace('https://www.naver.com');
+        // //두개는 같음. 이력에 남고 이동
+        // location.assign('https://www.naver.com');
+        // location.href = 'https://www.naver.com';
+        // // reload: 새로고침
+        // location.reload();
+    }
+</script>
+<body>
+    <button onclick="open_window()">새창 띄워용</button>
+    <button onclick="change_data()">눌러봐</button>
+    <button onclick="history.back()">뒤로가기</button>
+    <button onclick="history.forward()">앞으로가기</button>
+</body>
+</html>
+
+
+
+
+
+
+
+

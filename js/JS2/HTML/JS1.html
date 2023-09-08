@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="JS1.js" async></script>-->
+    <script src="JS1.js" defer></script>
+</head>
+<script>
+    // "use strict";
+    // 아래부터는 엄격 모드 적용
+    // 함수 내에 선언 시 함수 내에서만 적용
+    console.log(window.name);
+
+    function open_window() {
+        window.open('https://www.google.com', 'popup', 'width=400, height=400 top=30 left=50 resizable=no, location=no');
+    }
+
+    function change_data() {
+        location.href = 'https://www.naver.com';
+        console.log(location.href);
+        location.assign('https://www.naver.com');
+        //reload : 새로고침
+        location.reload();
+        //replace 이력을 남기지 않고 이동. (페이지 자체를 교체함. 뒤로가기x)
+        location.replace('https://www.naver.com');
+    }
+
+</script>
+<body>
+    <iframe src="test2.html" frameborder="1"></iframe>
+    <button onclick="open_window()">새창 띄우기</button>
+    <button onclick="change_data()">새창 띄우기</button>
+    <button onclick="history.back()">뒤로가기</button>
+    <button onclick="history.forward()">앞으로가기</button>
+
+    <h1 id="title">This is title.</h1>
+    <div>
+        <b>This is box. 1</b>
+        <a href="">to naver</a>
+    </div>
+    <div class="box">
+        This is box. 2
+    </div>
+
+    <p class="box">
+        여기는 단락 부분입니다. class
+    </p>
+
+    <select name="choo" id="">
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+    </select>
+</body>
+</html>

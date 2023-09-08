@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS기초문제</title>
+</head>
+<script>
+    // 삼항식
+    // 수식 ? 수식이true일때데이터 : 수식이false일때데1000이터
+    let result = 1 == 1 ? 100 : 1000;
+
+
+
+
+    // 1. 아래 배열에서 true와 false의 개수를 구하여 출력하라.
+    //     [false, false, true, true, false, false, false, true, false]
+    // 출력형식)
+    // T - ?개
+    // F - ?개
+    let arr = [false, false, true, true, false, false, false, true, false];
+    let f = 0; //false 개수 몇개?
+    let t = 0; //true 개수 몇개?
+
+    // for(let i of arr){
+    //     i ? t++ : f++;
+    // }
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === true){
+            t++;
+        }
+        else{
+            f++;
+        }
+    }
+
+    console.log('T - ' + t + '개')
+    console.log('F - ' + f + '개')
+
+    /* 2. 아래 배열에서 짝수번째는 대문자로, 홀수 번째는 소문자로 변경하라
+    ['aBc','AbC', 'AAA','BBB','CCC','DDD']
+    'aBc' 는 첫번째로 홀수입니다. 'AbC'는 2번째로 짝수
+    */
+    arr = ['aBc','AbC', 'AAA','BBB','CCC','DDD'];
+
+    // for(let i in arr){
+    //     arr[i] = (i + 1) % 2 === 0 ? arr[i].toUpperCase() : arr[i].toLowerCase();
+    // }
+
+    for(let i = 0; i < arr.length; i++ ){
+        if((i + 1) % 2 === 0){ //현재 i번째가 짝수다
+            arr[i] = arr[i].toUpperCase();
+        }
+        else{ //현재 i번째는 홀수다
+            arr[i] = arr[i].toLowerCase();
+        }
+    }
+
+    console.log(arr);
+
+    /*
+    3. 아래 문자열이 들어있는 배열에서 각 요소를 각 자리의 숫자의 합으로 변경하세요
+        ['123456789', '1000000']
+        => [45, 1] 로 변경
+    */
+    arr = ['123456789', '1000000'];
+    for(let j in arr){
+        let num = arr[j];
+        let sum = 0;
+        for(let i of num){
+            sum += +i; //sum = sum + i;
+        }
+        arr[j] = sum; //arr[j]에 결과를 저장함
+    }
+    console.log(arr);
+
+
+    /*
+    4. 아래 객체에서 각 key의 문자열을 value의 숫자 index부터 이루어진 문자열을 출력하세요
+    {'ProgrammerS123': 3, 'He110W0r1d': 5}
+    => 'grammerS123', 'W0r1d' 출력되어야 함
+    */
+    let obj = {'ProgrammerS123': 3, 'He110W0r1d': 5};
+    for(let key in obj){ //현재 객체의 parameter (key)값을 순회
+        let value = obj[key]; //key를 통해 value를 가져온다
+        result = key.substring(value); //해당 문자열을 잘라서 가져온다
+        console.log(result); //결과 출력
+    }
+
+    /*
+    * 5. 아래 2차원 배열에서 각 요소의 배열 길이가 5이상이면 각 배열 요소의 합을, 5미만이라면 각 요소를 곱해서 출력하세요.
+        [[3, 4, 5, 2, 5, 4, 6, 7, 3, 7, 2, 2, 1] , [2, 3, 4, 5], [10,100,1000], [1,2,3,4,5]]
+        출력형식)
+    */
+    arr = [[3, 4, 5, 2, 5, 4, 6, 7, 3, 7, 2, 2, 1] , [2, 3, 4, 5], [10,100,1000], [1,2,3,4,5]];
+    for(let childArr of arr){
+        if(childArr.length >= 5){ //각 요소의 합 구하기
+            let sum = 0;
+            for(let o of childArr){
+                sum += o;
+            }
+            console.log(sum);
+        }
+        else{ //각 요소의 곱 구하기
+            let sum = 1;
+            for(let o of childArr){
+                sum *= o;
+            }
+            console.log(sum);
+        }
+    }
+
+    for(let childArrIndex in arr){
+        let check = arr[childArrIndex].length >= 5;
+        let sum = check ? 0 : 1; //합 => 0, 곱 => 1
+        for(let o of arr[childArrIndex]){
+            sum = check ? sum + o : sum * o;
+        }
+        console.log((+childArrIndex + 1) + '번째 배열 =>' + sum);
+    }
+
+
+    /*
+    6. 아래 문자열에서 'x'를 기준으로 해당 문자열을 잘라내 배열을 만든 후 숫자형식으로 정렬한 배열을 출력하세요.
+    단, 빈 문자열은 반환할 배열에 넣지 않습니다.
+    '1x22x233x1000xx858'
+    => [1,22,233,858,1000]
+    */
+    // let data = '1x22x233x1000x858xxx51xx12xx12x5xx87';
+    // data = data.replaceAll('xx', 'x')
+    // console.log(data) //1x22x233x1000x858xx51x12x12x5x87
+
+
+
+
+    // console.log(result) //['1', '22', '233', '1000', '858']
+    //
+    // let firstPop = result.pop(); //858
+    // let secondPop = result.pop(); //''
+    // result.push(firstPop);
+    // console.log(result)
+
+    /*
+        7. 정수 배열 arr과 delete_list가 있습니다.
+        arr의 원소 중 delete_list의 원소를 모두 삭제하고 남은 원소들은 기존의 arr에 있던 순서를 유지한 배열을 출력하세요
+        arr: [293, 1000, 395, 678, 94]
+        delete_list: [94, 777, 104, 1000, 1, 12]
+        결과 => [293, 395, 678]
+    */
+    let resultArr = [];
+    arr = [293, 1000, 395, 678, 94];
+    let delete_list = [94, 777, 104, 1000, 1, 12];
+    for(let i = 0; i < arr.length; i++){
+        let check = delete_list.includes(arr[i]); // 해당 요소가 있는가?
+        //delete_list안에 존재하지 않으면 결과 배열에 저장
+        if(!check) {
+            resultArr.push(arr[i]);
+        }
+    }
+    resultArr.sort((x, y) => x - y); //정렬한다
+    console.log(resultArr);
+
+
+
+
+</script>
+
+<body>
+</body>
+</html>

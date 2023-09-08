@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 기초2</title>
+</head>
+<script>
+    let arrCon = Array(6); //생성자 방식
+    arrCon.push(6);
+
+    let arrlit = [1, 2, 3, 4, 5]; //리터럴 방식 (*추천!)
+    arrlit.push(6); //맨 마지막에 값 추가
+    let number = arrlit[2];
+    arrlit[2] = 'test';
+    console.log(number); //3
+    console.log(arrlit[2]); //test
+    console.log(arrlit); //1, 2, 'test', 4, 5, 6
+    // 배열의 마지막 요소를 제거
+    let r = arrlit.pop(); //r에는 제거한 마지막 요소를 저장
+    console.log('r =', r);
+    console.log(arrlit); //1, 2, 'test', 4, 5
+    let l = arrlit.length; //현재 배열의 요소를 알려줌
+    console.log('개수:', l);
+    arrlit.unshift(0, 10, 20);
+    console.log(arrlit); //[0, 10, 20, 1, 2, 'test', 4, 5]
+    r = arrlit.shift(); // 배열의 가장 첫번째 요소 제거
+    console.log('r:', r);
+    console.log(arrlit); //[10, 20, 1, 2, 'test', 4, 5]
+
+    arrlit.fill(50, 2, 5);
+    console.log(arrlit); //[10, 20, 50, 50, 50, 4, 5]
+    arrlit.splice(0, 5);
+    console.log(arrlit);
+
+    let numbers = [10, 1, 85, 5, 6];
+    numbers.sort((x, y) => x - y);
+    numbers.reverse();
+    console.log(numbers)
+
+    arrlit = [10, 20, 10, 20, 40];
+    let newArr = [30, 40];
+    let result = newArr.concat(arrlit);
+    console.log(arrlit);
+    console.log(result);
+    console.log('위치:', arrlit.indexOf(20));
+
+    console.log(arrlit); //[10, 20, 10, 20, 40]
+    let str = arrlit.join(''); //1020102040
+    console.log(str);
+    str = arrlit.slice(2, 4); //index 2부터 index 3포함, index 4는 포함안함
+    console.log(str);
+
+
+    arrlit = [1, 2, 3, 4, 5];
+    arrlit.copyWithin(2, 0, 2);
+    console.log(arrlit);
+    arrlit = [1, 2, 3, 4, 5];
+    // 원본 배열의 index 2부터 3개의 요소를 제거하고 그 자리에 10, 20을 삽입
+    arrlit.splice(2, 3, 10, 20); //[1, 2, 10, 20]
+    console.log(arrlit);
+
+    /**************** String *******************/
+    let s = 'This is test string';
+    result = s.charAt(2); // i
+    result = s.endsWith('str'); // 확장자명 검사시 유용함 .jpg, .txt 등..
+    console.log('결과:', result);
+    result = s.includes('is'); //타언어의 contains 와 같음.
+    console.log('결과:', result);
+    result = s.repeat(5);
+    console.log('결과:', result);
+    result = s.replace('is', 'AB');
+    console.log('s:', s);
+    console.log('결과:', result);
+    result = s.slice(2, 4);
+    console.log('결과:', result);
+
+    s = 'This is test string';
+    result = s.split('is ');
+    console.log(result);
+
+    //s.startsWith('')
+
+
+    /*********************** Date ************************/
+    // date 객체는 내부적으로는 날짜와 시간을 나타내는 정수값을 가짐.
+    // 1970년 1월 1일 0:0:0 기준 현재까지의 밀리초 시간
+    // 현재 시간으로 생성하기
+    let date = new Date();
+    console.log(date);
+    // 날짜와 시간을 정해서 생성하기
+    date = new Date('2020/03/26/05:30:55');
+    console.log(date);
+    // 년, 월, 일, 시, 분, 초, 밀리초
+    date = new Date(2022, 4, 10, 17, 13, 10);
+    console.log(date);
+
+    result = Date.now(); // 1970년 1월 1일부터 경과된 밀리초
+    console.log('현재까지의 초시간:', result);
+    // 1970년 1월 1일부터 경과된 밀리초 동일.
+    result = Date.parse('Thu Mar 26 2020 05:30:55');
+    console.log('위 시간까지의 초시간:', result);
+    result = Date.UTC(2022,2,10);
+    console.log('위 시간까지의 초시간:', result);
+
+    date = new Date();
+    console.log(date.toDateString());
+
+
+    /*********************************/
+    let arrdim = [
+        [1, 2, 3],
+        4,
+        5
+    ];
+    let arrVal = arrdim[0] // [1, 2, 3]
+    console.log('arrdim:', arrdim);
+    console.log('arrVal:', arrVal);
+    console.log('arrVal[1]:', arrVal[1]);
+    console.log('arrdim[0][1]:', arrdim[0][1]);
+
+    /*************************************/
+    arr = [1, 10, 100, 1000];
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+    for(let i in arr){ //index를 순회
+        console.log('i:', i);
+    }
+    for(let i of arr){ //value를 순회 => foreach와 비슷
+        console.log('i:', i);
+    }
+    // 일반 객체에서는 in은 사용 가능 => 프로퍼티명을 순회
+    // of는 사용 불가 (iterable이 아님)
+    let obj = {'a': 'test', 'b': 'test1', 'c': 'test2'}
+    for(let i in obj){
+        console.log('프로퍼티명:', i);
+        console.log('값:', obj[i]);
+    }
+
+
+
+
+
+
+</script>
+<body>
+</body>
+</html>

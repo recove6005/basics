@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.security.mapper.LoginMapper">
+    <select id="get_user_by_id" parameterType="string" resultType="UserDTO">
+        SELECT * FROM `sec_user` WHERE `userID` = #{userID};
+    </select>
+
+    <insert id="post_user" parameterType="UserDTO">
+        INSERT INTO `sec_user` VALUES(#{userID}, #{password});
+    </insert>
+</mapper>

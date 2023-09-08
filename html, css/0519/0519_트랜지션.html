@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜지션</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: green;
+        transition-duration: 1s;
+    }
+    div:target{
+        transform: rotate(360deg) translateX(0%);
+        background-color: red;
+    }
+</style>
+<body>
+    <a href="#div">변경시킴</a>
+    <a href="#">되돌림</a>
+    <div id="div"></div>
+</body>
+</html>
+
+
+
+
+

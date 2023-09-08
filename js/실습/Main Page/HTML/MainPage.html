@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<style>
+    :root {
+        --main-font-color: antiquewhite;
+        --main-background-color: cornflowerblue;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    nav {
+        overflow: hidden;
+    }
+    nav h1 {
+        margin: 0;
+        float: left;
+    }
+    nav h1 a {
+        display: inline-block;
+        height: 50px;
+        padding: 8px;
+        text-decoration: none;
+        color: var(--main-font-color);
+        background-color: var(--main-background-color);
+        font-size: 1.5em;
+    }
+
+    #menu_list_button {
+        margin: 8px;
+        float: right;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu_list_button_bar {
+        border: 3px solid var(--main-background-color);
+        width: 65%;
+        margin: 8px auto;
+        display: flex;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0 10px 30px;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: var(--main-background-color);
+        font-weight: bold;
+        color: var(--main-font-color);
+    }
+    nav ul li a:hover {
+        background-color: rgb(255,255,255,0.5);
+    }
+
+    header {
+        height: 800px;
+        margin: 0 auto;
+        background-image: url("https://images.unsplash.com/photo-1531219572328-a0171b4448a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRva3lvfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60");
+        background-size: 100% 800px;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        color: white;
+    }
+    .header_text {
+        position: absolute;
+        top: 25%;
+        width: 800px;
+        height: 100px;
+        text-align: center;
+    }
+    .header_text img {
+        width: 50px;
+        height: 50px;
+    }
+    .header_text h1 {
+        font-size: 3em;
+    }
+    .header_text p {
+        margin-bottom: 50px;
+    }
+    .header_text a {
+        padding: 10px 50px;
+        border: 2px solid var(--main-font-color);
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition-duration: 0.5s;
+        color: white;
+    }
+
+    .header_text a:hover {
+        background-color: rgba(255,255,255,0.3);
+    }
+    .header_text a:active {
+        color: white;
+    }
+
+    .box_wrapper {
+        width: 100%;
+        height: min-content;
+        margin: 20px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--main-background-color);
+    }
+    .box {
+        color: white;
+        margin: 0 auto;
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        text-align: center;
+    }
+
+    .box img {
+        padding: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        opacity: 0.8;
+    }
+    .subtitle {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .contents {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 780px) {
+        nav {
+            height: 65px;
+        }
+
+        #menu_list_button {
+
+        }
+
+        nav ul {
+            height: 100%;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            float: left;
+            display: flex;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            width: initial;
+
+            background-color: white;
+            color: var(--main-background-color);
+        }
+
+        nav ul li a:hover {
+            color: #40b8c7;
+        }
+
+        .box_wrapper {
+            width: 100%;
+            height: min-content;
+            margin: 20px auto;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: var(--main-background-color);
+        }
+        .box {
+            color: white;
+            display: inline-block;
+            padding: 20px;
+            width: 400px;
+            height: inherit;
+            text-align: center;
+        }
+        .box img {
+            padding: 8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 0.8;
+        }
+        .subtitle {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .contents {
+            text-align: start;
+        }
+
+        .box_wrapper2 {
+            background-color: white;
+            margin: 20px auto;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            background-image: url("https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .box_wrapper2 > section {
+            position: relative;
+            top: 50%;
+            margin-top: -150px;
+            overflow: hidden;
+        }
+
+        .box_wrapper2 > section > .box {
+            background-color: rgba(255,255,255,0.5);
+            color: black;
+            float: left;
+            height: inherit;
+        }
+
+        .box_wrapper3 {
+            background-color: white;
+            margin: 20px auto;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            background-image: url("https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .box_wrapper3 > section {
+            position: relative;
+            top: 50%;
+            margin-top: -150px;
+            overflow: hidden;
+        }
+
+        .box_wrapper3 > section > .box {
+            background-color: rgba(255,255,255,0.5);
+            color: black;
+            float: left;
+            height: inherit;
+        }
+    }
+
+</style>
+<body>
+    <nav class="nav">
+        <h1><a href="#" id="nav_logo">LOGGO</a></h1>
+        <a id="menu_list_button" href="#" type="button">
+            <div class="menu_list_button_bar"></div>
+            <div class="menu_list_button_bar"></div>
+            <div class="menu_list_button_bar"></div>
+        </a>
+        <ul>
+            <li><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+            <li><a href="#">Menu3</a></li>
+            <li><a href="#">Menu4</a></li>
+            <li><a href="#">Menu5</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+    <div class="header_text">
+        <img src="../../resources/icon-sushi.png" alt="">
+        <h1>Main Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eligendi eum eveniet id impedit, iste molestias
+            nisi odit porro provident quibusdam quidem repellat reprehenderit soluta tempore temporibus, velit voluptate
+            voluptatem?</p>
+        <a href="#">See details</a>
+    </div>
+    </header>
+
+    <section class="box_wrapper">
+        <div class="box">
+            <img src="../../resources/database-icon.png" alt="">
+            <h2 class="subtitle">Sub title</h2>
+            <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dolor et id mollitia nam natus omnis perspiciatis quaerat sit velit? Aspernatur ea expedita perferendis placeat, quaerat rem voluptatem voluptatibus! Voluptas.</p>
+        </div>
+        <div class="box">
+            <img src="../../resources/database-icon.png" alt="">
+            <h2 class="subtitle">Sub title</h2>
+            <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dolor et id mollitia nam natus omnis perspiciatis quaerat sit velit? Aspernatur ea expedita perferendis placeat, quaerat rem voluptatem voluptatibus! Voluptas.</p>
+        </div>
+        <div class="box">
+            <img src="../../resources/database-icon.png" alt="">
+            <h2 class="subtitle">Sub title</h2>
+            <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dolor et id mollitia nam natus omnis perspiciatis quaerat sit velit? Aspernatur ea expedita perferendis placeat, quaerat rem voluptatem voluptatibus! Voluptas.</p>
+        </div>
+    </section>
+
+    <section class="box_wrapper2">
+        <section class="box_wapper">
+            <div class="box"><img src="../../resources/database-icon.png" alt="">
+                <h2 class="subtitle">Sub Title</h2>
+                <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis culpa
+                    cumque dolore doloribus eius est explicabo nemo obcaecati odit porro provident quis recusandae rem
+                    similique, sunt ullam? Minima, qui.</p>
+            </div>
+            <div class="box"><img src="../../resources/database-icon.png" alt="">
+                <h2 class="subtitle">Sub Title</h2>
+                <p class="contents">Ab ad, architecto consequuntur cum dicta eligendi, esse et hic magni necessitatibus,
+                    quo repellat saepe sit tempora voluptas. Aliquam architecto deserunt dolorem laboriosam laudantium
+                    minima odio quidem quod rem, sunt.</p>
+            </div>
+            <div class="box"><img src="../../resources/database-icon.png" alt="">
+                <h2 class="subtitle">Sub Title</h2>
+                <p class="contents">A aliquid, deleniti praesentium quae repellendus tempora. Iste laborum molestias
+                    perspiciatis quia repellendus? Culpa dignissimos eveniet hic inventore maiores. Consequuntur fuga,
+                    impedit minus molestiae nihil perspiciatis praesentium quia quod ullam!</p>
+            </div>
+        </section>
+    </section>
+
+    <section class="box_wrapper3">
+        <section class="box_wapper">
+            <div class="box"><img src="../../resources/database-icon.png" alt="">
+                <h2 class="subtitle">Sub Title</h2>
+                <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis culpa
+                    cumque dolore doloribus eius est explicabo nemo obcaecati odit porro provident quis recusandae rem
+                    similique, sunt ullam? Minima, qui.</p>
+            </div>
+            <div class="box"><img src="../../resources/database-icon.png" alt="">
+                <h2 class="subtitle">Sub Title</h2>
+                <p class="contents">Ab ad, architecto consequuntur cum dicta eligendi, esse et hic magni necessitatibus,
+                    quo repellat saepe sit tempora voluptas. Aliquam architecto deserunt dolorem laboriosam laudantium
+                    minima odio quidem quod rem, sunt.</p>
+            </div>
+            <div class="box"><img src="../../resources/database-icon.png" alt="">
+                <h2 class="subtitle">Sub Title</h2>
+                <p class="contents">A aliquid, deleniti praesentium quae repellendus tempora. Iste laborum molestias
+                    perspiciatis quia repellendus? Culpa dignissimos eveniet hic inventore maiores. Consequuntur fuga,
+                    impedit minus molestiae nihil perspiciatis praesentium quia quod ullam!</p>
+            </div>
+        </section>
+    </section>
+
+    <footer class="footer">
+
+    </footer>
+
+</body>
+</html>

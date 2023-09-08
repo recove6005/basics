@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie</title>
+</head>
+<body>
+    <h2></h2>
+    <h3></h3>
+    <span></span>
+    <form action="/cookie" method="post">
+      ID : <input type="text" name="user_id">
+      PW : <input type="text" name="user_pw">
+
+      <!--사용자에게 보이지 않게 보내려면 input 태그 type=hidden-->
+      <input type="hidden" name="os" value="window10">
+      <input type="hidden" name="favorite" value="game">
+      <button>send!</button>
+    </form>
+</body>
+<script>
+    const cookie = document.cookie;
+    cookieValues = cookie.split('=');
+    document.querySelector("h2").textContent = cookieValues[0];
+    document.querySelector("h3").textContent = cookieValues[1];
+</script>
+</html>

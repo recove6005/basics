@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <script src="../../static/js/board/view.js" th:src="@{/js/board/view.js}" defer></script>
+</head>
+<body>
+<main>
+    <b>번호</b> <input id="board-no" type="text" value="${board.no}" readonly disabled> <br/>
+    제목 <input type="text" th:value="${board.title}" readonly disabled> <br/>
+    작성자 <input type="text" th:value="${board.userID}" readonly disabled> <br/>
+    작성일 <input type="text" th:value="${board.writeDate}" readonly disabled> <br/>
+    조회수 <input type="text" th:value="${board.count}" readonly disabled> <br/>
+    메인 이미지: <img th:src="@{|/board/file/${mainImage}|}" alt="메인이미지" width="300"> <br/>
+    <div>
+        첨부파일 리스트 :
+        <th:block th:each="normalFile: ${normalFiles}">
+            <a th:href="@{|/board/file/${normalFile}|}" th:download="${normalFile}">[[${normalFile}]]</a>
+        </th:block>
+    </div>
+
+    <textarea rows="5" cols="20" readonly disabled>
+        ${board.content}
+    </textarea>
+    <a href="/board/main">돌아가기</a> <a th:href="@{|/board/delete?no=${board.no}|}">삭제</a> <a th:href="@{/board/update(no=${board.no})}">수정</a>
+
+    <section id="comment-write">
+        <div>
+            제목: <input type="button"> 작성자: <input type="text"> <br/>
+            <textarea cols="50" rows="3">내용</textarea>
+            <input type="button" value="작성">
+        </div>
+    </section>
+
+    <br><br>
+
+
+
+</main>
+</body>
+</html>

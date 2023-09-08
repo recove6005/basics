@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springdbproejct.mappers.UserMapper">
+    <select id="get_user" resultType="UserDTO">
+        SELECT * FROM `user` WHERE id = #{id} AND pw = #{pw}
+    </select>
+    <select id="is_user_exist" parameterType="UserDTO" resultType="UserDTO">
+        SELECT * FROM `user`
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="nickName != null">
+                nickName = #{nickName}
+            </if>
+        </where>
+        LIMIT 1
+    </select>
+
+    <resultMap id="room_in_user" type="userDTO">
+        <id property="id" column="id" />
+        <result property="pw" column="pw" />
+        <result property="nickName" column="nickName" />
+        <result property="registDate" column="registDate" />
+
+        <association property="roomDTO" javaType="roomDTO">
+            <id property="no" column="no" />
+            <result property="capacity" column="capacity" />
+        </association>
+    </resultMap>
+
+    <select id="get_users" resultType="UserDTO">
+        SELECT * FROM `user`
+    </select>
+
+    <select id="get_users_of_capacity" parameterType="byte" resultType="UserDTO">
+        SELECT * FROM `user` U
+        INNER JOIN `room` R
+        ON U.`roomNo` = R.`no`
+        WHERE R.`capacity`<![CDATA[ <= ]]> #{capacity};
+    </select>
+
+    <!--    <select id="get_user" parameterType="string" resultMap="room_in_user">-->
+    <!--        SELECT * FROM `user` U-->
+    <!--        INNER JOIN `room` R-->
+    <!--        ON U.`roomNo` = R.`no`-->
+    <!--        WHERE id = #{id}-->
+    <!--    </select>-->
+
+    <insert id="insert_user">
+        INSERT INTO `user` VALUES (#{id}, #{pw}, #{nickName}, DEFAULT)
+    </insert>
+
+
+<!--    <select id="get_user" parameterType="string" resultType="com.example.springdbproejct.dtos.UserDTO">-->
+<!--&lt;!&ndash;        id : UserMapper 인터페이스 내에서의 구현할 함수명&ndash;&gt;-->
+<!--&lt;!&ndash;        resultType : 반환 타입&ndash;&gt;-->
+<!--        &lt;!&ndash; SELECT * FROM `user` WHERE id = #{id} &ndash;&gt;-->
+<!--        SELECT * FROM `user` WHERE `id` = #{id} AND `pw` = #{pw}-->
+<!--    </select>-->
+
+<!--    <select id="is_user_exist" parameterType="com.example.springdbproejct.dtos.UserDTO" resultType="com.example.springdbproejct.dtos.UserDTO">-->
+<!--        SELECT * FROM `user`-->
+<!--        WHERE-->
+<!--        <where>-->
+<!--            <if test="id != null">-->
+<!--                id = #{id}-->
+<!--            </if>-->
+<!--            <if test="nickName!= null">-->
+<!--                nickName = #{nickName}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--        LIMIT 1;-->
+<!--    </select>-->
+
+<!--    <select id="get_users" resultType="com.example.springdbproejct.dtos.UserDTO">
+        SELECT * FROM `user`
+    </select>
+
+    <select id="get_users_of_capacity" parameterType="byte" resultType="com.example.springdbproejct.dtos.UserDTO">
+        SELECT * FROM `user` U INNER JOIN `room` R
+        ON U.roomNo = R.no
+        WHERE R.`capacity`
+        <![CDATA[ <= ]]>
+        #{capacity};
+    </select>
+
+    <select id="get_user_by_id" parameterType="string" resultType="com.example.springdbproejct.dtos.UserDTO">
+        SELECT * FROM `user` WHERE id = #{id}
+    </select>
+
+    <insert id="insert_user">
+        INSERT INTO `user` VALUES(#{id}, #{pw}, #{nickname}, DEFAULT)
+    </insert>
+
+-->
+<!--    <resultMap id="user_by_id" type="com.example.springdbproejct.dtos.UserDTO">-->
+<!--        <id property="id" column="id"></id>-->
+<!--        <result property="pw" column="pw"></result>-->
+<!--        -->
+<!--        <association property="com.example.springdbproejct.dtos.RoomDTO"-->
+<!--    </resultMap>-->
+</mapper>
+

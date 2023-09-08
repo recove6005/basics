@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Style</title>
+</head>
+<style>
+    div{
+        width: 80px;
+        height: 80px;
+        background-color: beige;
+    }
+</style>
+<body>
+    <h3>Computed Style(계산된 스타일)</h3>
+    <button onclick="plus()">크게하기</button>
+    <div>
+        박스
+    </div>
+    <section>
+        섹션
+    </section>
+</body>
+</html>
+
+<script>
+    const div = document.querySelector('div');
+    const section = document.querySelector('section');
+    function plus(){
+        let width = getComputedStyle(div).width;
+        let finalWidth = width.substring(0, width.length - 2);
+        //가로 값을 100px 증가시키기
+        div.style.width = (+finalWidth  + 100) + 'px';
+    }
+</script>
+
+
+
+
+
+
+

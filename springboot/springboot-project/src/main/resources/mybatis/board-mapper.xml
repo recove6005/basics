@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.boot.mappers.BoardMapper">
+    <select id="get_boards" resultType="BoardDTO">
+        SELECT * FROM `board`;
+    </select>
+
+    <select id="get_board" resultType="BoardDTO">
+        SELECT * FROM `board` WHERE `no` = #{no};
+    </select>
+
+    <update id="increase_count" parameterType="int">
+        UPDATE `board` SET `count` = `count` + 1 WHERE `no` = #{no}
+    </update>
+
+    <delete id="delete_board" parameterType="int">
+        DELETE FROM `board` WHERE no = #{no}
+    </delete>
+
+    <update id="update_board" parameterType="BoardDTO">
+        UPDATE `board` SET title = #{title}, content = #{content}
+        WHERE no = #{no}
+    </update>
+
+    <insert id="insert_board" parameterType="BoardDTO" >
+        INSERT INTO `board` (userID, title, content) VALUES
+        (#{userID}, #{title}, #{content})
+    </insert>
+
+    <insert id="insert_file" parameterType="FileVO" >
+        <selectKey keyProperty="boardNo" resultType="int" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO `files` VALUES
+        <foreach item="name" collection="fileName" separator=",">
+            (NULL, #{boardNo}, #{name})
+        </foreach>
+    </insert>
+
+
+    <resultMap id="get_file_names" type="FileVO">
+        <id property="boardNo" column="boardNo" />
+        <collection property="fileName" column="fileName" ofType="string" javaType="list">
+            <result property="fileName" column="fileName" />
+        </collection>
+    </resultMap>
+    <select id="get_files" resultMap="get_file_names">
+        SELECT boardNo, fileName FROM `files` WHERE boardNo = #{no}
+    </select>
+</mapper>

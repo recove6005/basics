@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JS9</title>
+    <script src="../JavaScript/JS9.js" defer></script>
+</head>
+<body>
+    <form action="">
+        <label>날짜 : <input name="date" type="date"></label> <br>
+        <label>파일 : <input name="file" type="file"></label> <br>
+        <label>통신사 :
+            <select name="mobile" id="">
+                <option value="" disabled>선택</option>
+                <option value="KT">KT</option>
+                <option value="LG">LG</option>
+                <option value="SKT">SKT</option>
+            </select>
+        </label> <br>
+        <input type="button" onclick="get_data()" value="가져오기">
+    </form> <br>
+    <form action="Practice3_JS8.html" method="post" target="_blank">
+        <label>색깔 : <input name="color" type="color"></label> <br>
+        <label>배경색 : <input name="bgcolor" type="color"></label> <br>
+        <label><textarea name="area" cols="20" rows="4"></textarea></label> <br>
+        <input type="button" onclick="set_data()" value="설정하기">
+
+<!--        &lt;!&ndash; 폼전송 버튼들 &ndash;&gt;-->
+<!--        &lt;!&ndash; 페이지 설정이 없을 시 reload &ndash;&gt;-->
+<!--        <input type="submit" value="input submit">-->
+
+<!--        &lt;!&ndash; img태그를 a태그로 묶으면 버튼이 됨.&ndash;&gt;-->
+<!--        &lt;!&ndash; img태그에 onclick &ndash;&gt;-->
+<!--        &lt;!&ndash; img태그를 div로 묵은 후 div에 onclick &ndash;&gt;-->
+<!--        <a href="">-->
+<!--            <img width="100px" height="30px" src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F123496066%2Fko%2F%25EC%2582%25AC%25EC%25A7%2584%2F%25EB%25B9%25A8%25EA%25B0%2584%25EC%2583%2589-%25EB%25B9%2584%25EC%2583%2581-%25EB%25B2%2584%25ED%258A%25BC.jpg%3Fs%3D612x612%26w%3Dis%26k%3D20%26c%3DO8IWxaKsOJhGhoJpDevARUJbQZEsrzqszZUgp5TjJm0%3D&type=a340" alt="">-->
+<!--        </a>-->
+<!--        &lt;!&ndash; img태그를 button태그로 묶음 &ndash;&gt;-->
+<!--        <button><img src="" alt=""></button>-->
+
+
+        <div onclick="send_data()">
+            <img width="100px" height="30px" src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F123496066%2Fko%2F%25EC%2582%25AC%25EC%25A7%2584%2F%25EB%25B9%25A8%25EA%25B0%2584%25EC%2583%2589-%25EB%25B9%2584%25EC%2583%2581-%25EB%25B2%2584%25ED%258A%25BC.jpg%3Fs%3D612x612%26w%3Dis%26k%3D20%26c%3DO8IWxaKsOJhGhoJpDevARUJbQZEsrzqszZUgp5TjJm0%3D&type=a340" alt="">
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+GET http://localhost:8080/hello
+X-Csrf-Token: 245df9df-a481-47e5-a51f-9fdf20a8c249
+Content-Type: text/plain
+This is request data
+
+###
+GET http://localhost:8080/hello
+Authorization: Basic user 245df9df-a481-47e5-a51f-9fdf20a8c249
+
+###
+GET http://localhost:8080/hello
+Authorization: Basic john 123
+
+###
+GET http://localhost:8080/hello
+Authorization: Basic james 456

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>키보드 이벤트</title>
+</head>
+<body>
+    <input type="text">
+    <input type="text">
+    <textarea cols="30" rows="3"></textarea>
+</body>
+</html>
+<script>
+    let [input1, input2, textarea] = document.body.children;
+    input1.addEventListener('keydown', (e) => {
+        input2.value += e.key;
+        console.log(e.charCode)
+    });
+    textarea.addEventListener('keydown', e => {
+       textarea.style.color = 'red';
+    });
+    textarea.addEventListener('keypress', e => {
+        textarea.style.color = 'orange';
+    });
+    textarea.addEventListener('keyup', e => {
+        textarea.style.color = 'blue';
+    });
+
+
+
+
+</script>
+
+
+
+
+
+
+
+

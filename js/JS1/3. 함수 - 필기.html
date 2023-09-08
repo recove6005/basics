@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 기초 - 함수</title>
+</head>
+<script>
+
+  /**** 함수 기본 정의 ****/
+  function print() {
+      console.log("function executed!");
+      console.log("function executed!");
+      console.log("function executed!");
+  }
+  print();
+
+
+  //함수 매개변수 정의, 인수(argument) 사용
+  function print_name(name) {
+      console.log(`hello, ${name} !`); // + 를 쓰지 않고 문자열 출력~   벡틱으로 묶은 후 매개변수는 ${}
+  }
+  print_name("leehan"); // 인수로는 배열, 문자열 등 모든 게 가능!
+  print_name(); // 인수가 없을 시 매개변수에는 undefined가 넘어간다!
+  print_name("leehan", "gildong"); // 뒤의 인수 "gildong"은 무시 됨.
+
+
+  // 반환형 함수
+  // 함수 정의 전에 호출해도 오류x
+  function sum(num1, num2) {
+      let result = num1 + num2;
+      if(result > 10) return 'over 10';
+      else if(result < 10) return 'under 10';
+      return result;
+  }
+  console.log(sum(1, 10));
+  console.log(sum(1, "abc")); // 문자열 1abc 반환됨~
+  console.log(sum({a: 1, b: 2}, {a: 1, b:2}));
+
+  const arr1 = [23, 2, 2, 2, 2];
+  arr1[0] = 10; // 가능
+  // const : arr 배열 전체의 위치의 관점.
+  // 변수 내에 있는 값은 바꿀 수 있으나(참조형), 변수 자체의 값(배열의 주소값)은 바꿀 수 없음.
+  // arr = 2; =>> 안됨.
+
+  let arr2 = arr1; // arr2에는 arr1의 위치가 전달됨. (참조에 의한 복사)
+  arr2[0] = 100000; // arr[0]의 값도 100000이 됨. const 값이 참조형이기 때문.
+  console.log(arr1);
+  console.log(arr2);
+
+  /**** 리터럴 형식으로 함수 생성 ****/
+// 함수 이름은 f
+// 함수 정의 전에 호출 시 오류o (리터럴)
+  let f = function(a, b) {
+      console.log(a, b);
+  }
+  f(1,2);
+
+  /**** 즉시 실행 함수 ****/
+  let f2 = (function() {
+      console.log("즉시 실행!");
+      return "return value";
+  })();
+
+  //1회용 함수 다시 사용할 수 없음
+  (function(a, b) {
+      console.log(`a+b : ${a+b}`);
+      return "return value";
+  })(1,5);
+
+  let result = f2; //즉시 실행된 f2의 리턴값.
+  console.log(result);
+
+  /**** 화살표 함수 ****/
+// 화살표 함수 정의.
+      () => {
+      console.log('화살표 실행');
+  }
+
+  //괄호로 묶으면 반응함.
+  (() => {
+      console.log('화살표 실행');
+  })();
+
+  //변수에 넣으면 함수의 이름을 정의함.
+  let arrow = () => {
+      console.log('괄호로 묶은 화살표 실행');
+  };
+  arrow();
+
+  let f3 = a => a+10;
+  //let f3 = a => { return a+10; }
+  console.log(f3(1,2));
+
+
+  /**** 중요~! ****/
+  function f4(param) {
+      //함수 f3이 param의 이름으로 실행된다.
+      //if param이 함수이면 : instanceof Function
+      if(param instanceof Function) {
+          console.log('param은 함수 => ' + param); //param.toString();으로 자동으로 실행.
+          //console.log('함수 f4 내에서 실행한 f3 param => ' + param(111));
+      } else console.log(param);
+  }
+
+  // 1)
+  f4(f3);
+
+  // 2)
+  f4(100);
+
+  // 3)
+  f4(function () {
+      console.log('test')
+  });
+
+  // 4)
+  f4( () => {
+      console.log('test')
+  });
+
+  // -------
+  function f5(params = [1,2]) { // 매개변수 기본값 설정
+      console.log(params);
+  }
+  f5(); //undefined
+  f5(1,2,3,4,5); // 1 하나만 들어감.
+
+  function f6 (...params) { // 모든 매개변수를 배열로 만듦.
+      console.log(' params: ' + params);
+  }
+  f6(1,2,3,4,5);
+
+  function f7 (p, ...params) {
+      console.log('p : ' + p + ' params: ' + params);
+  }
+  f7(1,2,3,4,5);
+
+
+  /**** 생성자 함수 ****/
+  const strObj = new String('test'); // string 생성자 함수
+  console.log(typeof strObj);
+  console.log(strObj);
+
+  //객체 리터럴에 의한 객체 생성 방식
+  //함수 프로퍼티와 값으로 나눠서 생성하기
+  const circle = {
+      radius: 5,
+      getRadius() {
+          return this.radius**2;
+      }
+  }
+  console.log(circle['radius']);
+  console.log(circle.radius**2); //circle 너비 //**(제곱)
+  console.log(circle.getRadius());
+
+  //생성자 함수에 의한 객체 생성 방식
+  function Circle(radius) {
+      this.radius = radius; //Circle의 프로퍼티를 만드는 가정 this. radius라는 멤버변수 생성.
+      function getRadius() {
+          console.log('함수 내에서 실행된 radius');
+          return this.radius**2;
+      }
+      getRadius();
+  }
+
+  let c1 = new Circle(5); //생성자 함수를 통한 객체 생성
+  let c2 = new Circle(10); //생성자 함수를 통한 객체 생성
+  console.log(c1.radius);
+  console.log(c2.radius);
+
+  //c1.getRadius();  ---> x 객체 정의 내에서만 호출이 가능.
+  //c1. 으로 함수를 실행 하려면.
+  function Circle2(radius) {
+      this.radius = radius;
+      this.getRadius = function() {
+          return this.radius**2;
+      }
+  }
+  let c3 = new Circle2(6);
+  console.log(c3.getRadius());
+
+  //
+  Circle2('new 키워드 없이 생성 시 함수로 동작');
+</script>
+<body>
+
+</body>
+</html>

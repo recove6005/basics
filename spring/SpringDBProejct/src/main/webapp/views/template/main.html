@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- thymeleaf 사용하기~ : xmlns 추가-->
+<!--setting -> editor -> file and code template -> html 에서 설정~ -->
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Main</title>
+</head>
+<body>
+    <a href="https://www.naver.com">Move to ~ </a>
+    Thymeleaf Main
+    <input type="text" value="user : ${userId}">
+    <span>userId : ${userId}</span>
+    <span th:text="when server is excuted"> halo server. </span>
+</body>
+</html>

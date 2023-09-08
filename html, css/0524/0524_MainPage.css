@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: '빙그레체';
+    src: url("리소스/Binggrae.ttf");
+}
+:root{
+    --main-color: #40b8c7;
+    --accent-color: #1b525a; /* 강조 색 */
+    --text-bright-color: #FFF; /* 흰색 - 텍스트 */
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.conA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-bright-color);
+    text-align: center;
+    height: 100vh; /* 세로 화면을 꽉 채우도록 */
+    background-image: url("리소스/main-image.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.conA h1{
+    margin-left: 0.2em; /* letter-spacing 때문에 왼쪽도 띄워줌 */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 8vw;
+    letter-spacing: 0.2em; /* 글자 간격 띄우기 */
+}
+.conA p{
+    margin: 0;
+    font-size: 2rem;
+}
+/* 로고 이미지 */
+.conA img{
+    width: 10%;
+}
+.conA a{
+    display: inline-block;
+    margin-top: 60px;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    color: var(--text-bright-color);
+    background-color: var(--accent-color);
+    border: 3px solid white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+/************ conB 관련 *************/
+.conB h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.conB p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+.conB a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+.conB a:hover{
+    text-decoration: underline;
+}
+.conB .icon{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 35px;
+    width: 2em;
+    text-align: center;
+    line-height: 2em;
+    background-color: #D1D1D1;
+    border-radius: 50%;
+}
+.conB .container{
+    padding: 70px 30px;
+}
+
+.conB .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.more{
+    position: absolute;
+    bottom: 30px;
+}
+.more > a{
+    margin-right: 0.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 768px을 기준으로 반응형 */
+@media screen and (min-width: 768px) {
+    /* 만약 화면 너비가 768px이라면 1vw = 7.68px, 8vw = 61.44px */
+    .conA h1{
+        font-size: 123.44px;
+    }
+    .conA p{
+        font-size: 43px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .conB .container{
+        display: flex;
+    }
+    .conB .text{
+        flex: 1;
+    }
+}
+
+
+
+
+
+
+

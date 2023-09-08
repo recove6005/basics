@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    This page is main.
+<!--    <span th:if="not empty ${#request.getAttribute('error-message')}">[[${error-message}]]</span>-->
+    <span th:text='${errorMessage}'></span>
+
+    <form method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        ID: <input type="text" name="username"> <br>
+        PW: <input type="text" name="password"> <br>
+        Auto Login <input type="checkbox" name="remember-me"> <br>
+<!--        name을 username, password로 해두면 폼 요청이 자동으로 loadUserByUsername으로 감-->
+        <button>Login</button>
+    </form>
+</body>
+</html>

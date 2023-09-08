@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#sticker-wrap{
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* 스티커 노트 통째로 */
+.sticker-note{
+    width: 280px;
+    height: 350px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    font-size: 1.3rem;
+    background-color: #785dad;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    opacity: 0.9;
+    overflow: hidden;
+}
+.sticker-note:hover{
+    opacity: 1;
+}
+/* title 부분 */
+.sticker-note > div{
+    padding: 5px 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 노트 윗부분 목록 */
+.sticker-note > .top-nav{
+    height: 32px;
+    line-height: 32px;
+}
+.sticker-note > .top-nav a{
+    display: inline-block;
+    padding: 0 5px;
+    color: #333;
+    text-decoration: none;
+}
+.sticker-note > .top-nav a:hover{
+    color: white;
+    background-color: #333;
+}
+.sticker-note > .top-nav > a.add{
+    float: left;
+}
+.sticker-note > .top-nav > div.nav-right{
+    float: right;
+}
+
+/* 텍스트 에리어 */
+.sticker-note > textarea{
+    width: inherit;
+    height: 318px;
+    margin: 0; padding: 10px;
+    box-sizing: border-box;
+    background-color: #c0acea;
+    resize: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
+/* 사이드바 */
+.sticker-note > .side-nav{
+    position: absolute;
+    width: 50%;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    list-style: none;
+    overflow: auto;
+    transition: 0.5s;
+}
+.sticker-note > .side-nav[active]{
+    left: 0;
+}
+/* 노트 색상 값 리스트 */
+.sticker-note-color{
+    display: flex;
+    height: 10%;
+}
+.sticker-note-color > span{
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+.sticker-note-color > span:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+
+.sticker-note > .side-nav li{
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.sticker-note > .side-nav li:hover{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+/* 오른쪽 노트 리스트 */
+#list-wrap{
+    float: right;
+    width: 25rem;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 3px solid black;
+    background-color: #FF01;
+    font-size: 1.6rem;
+}
+
+#list-wrap > nav{
+    background-color: #333333;
+    height: 50px;
+    line-height: 50px;
+}
+#list-wrap > nav a{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+#list-wrap > nav a:hover{
+    color: red;
+}
+#list-wrap > div{
+    padding: 6px 14px;
+}
+#list-wrap input{
+    width: 21rem;
+    margin: 0.4rem 0;
+    border: none;
+    border-radius: unset;
+    font-size: 1.3rem;
+    padding: 0.2rem 0.4rem;
+}
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springdbproejct.mappers.CommentMapper">
+    <select id="get_all_comments" resultType="CommentDTO">
+        SELECT * FROM `comment`;
+        <if test="userId != null">
+            WHERE `userId` = #{userId}
+        </if>
+    </select>
+
+    <insert id="insert_comment" parameterType="CommentDTO">
+        INSERT INTO `comment` VALUES(NULL, #{userId}, #{text}, DEFAULT);
+    </insert>
+
+    <update id="update_comment">
+        UPDATE `comment` SET `text` = #{text} WHERE `no` = #{no}
+    </update>
+
+    <delete id="delete_comment" parameterType="int">
+        DELETE FROM `comment` WHERE `no` = #{no}
+    </delete>
+</mapper>

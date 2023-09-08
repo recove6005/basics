@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수. Function</title>
+</head>
+<script>
+    function print() {
+        console.log('함수 실행!');
+        console.log('함수 실행!');
+        console.log('함수 실행!');
+    }
+
+    print(); // 함수 실행
+    console.log('함수 끝')
+    print();
+
+    /* 인수와 매개변수 */
+    //'매개변수'(parameter-파라미터)가 있는 함수 형태
+    function print_name(name = '성우'){
+        console.log(`안녕! ${name}야`)
+    }
+    //'인수' 작성 안할시 undefined가 매개변수에 저장이 된다
+    print_name();
+    //'인수' (argument)를 작성해서 함수를 호출
+    print_name('길동');
+    print_name('둘리');
+    //'인수'가 '매개변수'보다 개수가 많을 시, 뒤의 인수는 무시
+    print_name('도우너', '마이콜');
+
+    /* 반환형 (return) */
+    function calculator(num1, num2){
+        let result = num1 + num2;
+        if(result > 10){
+            return "10보다 큼";
+        }
+        return "10보다 작음";
+    }
+
+    let a = calculator(1, 10);
+    let b = calculator(1, 1);
+    console.log(a);
+    console.log(b);
+
+
+    function return_test(data){
+        if(data === 10){
+            return; //함수를 즉시 종료하라
+        }
+        console.log('10이 아니군..')
+        return 10;
+    }
+    let r = return_test(10);
+    console.log(r);
+
+    test();
+    function test(){
+        console.log('test실행!');
+    }
+
+    const arr = [23, 2, 2];
+    const arr2 = arr;
+    arr2[0] = 100000;
+
+    console.log(arr)
+    console.log(arr2);
+
+    // 리터럴 형식으로 함수 생성
+    let f = function () {
+        console.log('f 실행')
+    };
+    f();
+
+</script>
+<body>
+</body>
+</html>

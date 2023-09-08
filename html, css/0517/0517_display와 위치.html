@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>디스플레이와 float</title>
+</head>
+<style>
+    div:first-child{
+        display: inline-block;
+        /*visibility: hidden;*/
+        background-color: orange;
+    }
+    div{
+        margin: 10px;
+        background-color: burlywood;
+    }
+    #box1{
+        float: left;
+    }
+    #box2{
+        background-color: blue;
+        float: left;
+    }
+    #box3{
+        background-color: red;
+        height: 3rem;
+        clear: left;
+    }
+    img{
+        width: 10rem;
+        float: left;
+    }
+    span{
+        float: right;
+    }
+    p{
+        clear: both;
+    }
+</style>
+
+<body>
+    <!--
+        display 화면에 요소를 배열하는 방법을 정의함
+        none: 화면에 보이지 않고 자리 차지도 하지 않음. (visibiliy: hidden)과 다름
+        block: box 요소처럼 처리하며 부모 요소의 가로 크기(한 줄)를 전부 차지한다
+        inline: 한 줄을 전부 차지하지 않고 내부에 들어있는 요소 만큼만 공간을 차지한다
+                => width, height 가 적용되지 않는다, 다른 요소가 바로 옆에 표시된다
+        inline-block: box 요소처럼 처리하지만 한 줄을 전부 차지하지 않고
+            inline처럼 들어있는 요소 만큼만 공간을 차지한다. 다른 요소가 바로 옆에 표시된다
+            또한, width, height 설정이 가능하다!
+    -->
+    <div>영역이다</div>
+    <div>영역2다</div>
+
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMjVfMTE2%2FMDAxNjc3MzIyOTE0NDE1.mbLXWJnqOLDNqQdbFDzU13590vpphD0V0bVKvQTKz30g.Mx9PqSsqW5XVa-2WQSooWh5hHLlnsCXwMFdOMFmkocMg.JPEG.dbfla4232%2FIMG_9994.JPG&type=a340" alt="">
+    <span>이 이미지는 펭수다</span><br>
+    <span>힘들다...</span>
+    <p>
+        여기는 다음 단락이다
+    </p>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

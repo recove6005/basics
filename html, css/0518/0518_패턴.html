@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그라데이션 패턴</title>
+</head>
+<style>
+    div{
+        width: 300px;
+        height: 150px;
+        border: 1px solid black;
+        margin: 14px 0;
+    }
+    .grad1{
+        background: repeating-linear-gradient(yellow, red 20px);
+        background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+    }
+    .grad2{
+        background: repeating-radial-gradient(circle, white, #06F 10%);
+        background: repeating-radial-gradient(circle, white, white 10%, #06F 10%, #06F 20%);
+    }
+
+
+</style>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+</body>
+</html>
+
+
+
+
+
+

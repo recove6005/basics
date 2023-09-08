@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.boot.mappers.UserMapper">
+    <select id="get_user" resultType="UserDTO">
+        SELECT * FROM `user` WHERE id = #{id} AND pw = #{pw}
+    </select>
+    <select id="is_user_exist" parameterType="UserDTO" resultType="UserDTO">
+        SELECT * FROM `user`
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="nickName != null">
+                nickName = #{nickName}
+            </if>
+        </where>
+        LIMIT 1
+    </select>
+
+    <select id="get_users" resultType="UserDTO">
+        SELECT * FROM `user`
+    </select>
+
+    <insert id="insert_user">
+        INSERT INTO `user` VALUES (#{id}, #{pw}, #{nickName}, DEFAULT)
+    </insert>
+</mapper>
+
