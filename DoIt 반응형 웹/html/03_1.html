@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>미디어 쿼리</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #wrap {
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid #000;
+    }
+    #wrap div {
+        display: inline-block;
+        height: 100px;
+    }
+    #wrap div:first-child {
+        background: #f7e041;
+    }
+    #wrap div:nth-child(2) {
+        background: #1f518b;
+    }
+    #wrap div:nth-child(3) {
+        background: #ABA0F8;
+    }
+    #wrap div:nth-child(4) {
+        background: #40b8c7;
+    }
+    #wrap div:last-child {
+        background: #0abb26;
+    }
+
+    /*** 미디어 쿼리 적용 ***/
+    @media all and (min-width: 320px) {
+        #wrap div {
+            width: 100%;
+        }
+    }
+    @media all and (min-width: 768px) {
+        #wrap div {
+            width: 50%;
+        }
+
+        #wrap div:last-child {
+            width: 100%;
+        }
+    }
+    @media all and (min-width: 1024px) {
+        #wrap div {
+            width: 20%;
+        }
+
+        #wrap div:last-child {
+            width: 20%;
+        }
+    }
+</style>
+<body>
+    <div id="wrap">
+        <div></div><div></div><div></div><div></div><div></div>
+    </div>
+</body>
+</html>
