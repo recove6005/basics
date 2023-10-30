@@ -1,1 +1,1 @@
-# studying
+# Personal studies
