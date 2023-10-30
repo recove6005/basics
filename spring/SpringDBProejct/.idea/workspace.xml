@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="springdbproejct:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7e36fbb-9d60-4e8d-b477-c9af2027440f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SimpleBoard/src/main/resources/config/root-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleBoard/src/main/resources/config/servlet-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleBoard/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleBoard/src/main/resources/mappers/config/configuration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleBoard/src/main/resources/mappers/sample-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springdbproejct/dtos/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springdbproejct/mappers/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springdbproejct/restController/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springdbproejct/restController/RestTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/comment-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/rest/comment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/rest/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/request.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/annotation/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/aop/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/aop/Logging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/config/AOPConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/config/ScopeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/config/UserConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/main/AOPMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/main/ScopeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/controller/ErrorAdviceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/controller/ModelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/controller/SimpleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/format/LocalDateFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/vo/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/mvc/vo/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/product.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/product_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/product_jpn_JP.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/product_kr_KR.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/user.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/WEB-INF/root-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/error/default.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/main/board.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/model.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/simple.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/test/order.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/test/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/views/user/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/annotation/AnnotationMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/main/AnnotationMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/annotation/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/annotation/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/user/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/test/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/user/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/test/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/user/MyCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/test/MyCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/java/com/example/springproject/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringProject/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringProject/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="spring-beans.schema" />
+        <option value="HTTP Request" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="2TeUwMthVPDQt3Kra056jDSdvIz" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/recove6005/simple-board/SimpleBoard",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "spring.configuration.checksum": "389572e8ec9cf67cbd54c14d8b08c7e8",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\java\com\example\springdbproejct" />
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\webapp\views\user" />
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\resources\mappers\config" />
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\resources\config" />
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\resources" />
+      <recent name="C:\recove6005\spring-project\SpringDBProejct\src\main\resources\mappers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.78">
+    <configuration name="request | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/request.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="request | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/request.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="MySpringTest.board_user_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdbproejct" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MySpringTest" />
+      <option name="METHOD_NAME" value="board_user_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringTest.std_club_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdbproejct" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MySpringTest" />
+      <option name="METHOD_NAME" value="std_club_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringTest.user_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdbproejct" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MySpringTest" />
+      <option name="METHOD_NAME" value="user_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SpringDBProejct" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SpringDBProejct" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.78" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.78" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8 " />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="springdbproejct:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="58e47863-f386-46e6-a01c-a298a43d1a68" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52913" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springdbproejct:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.request | #1" />
+      <item itemvalue="HTTP Request.request | #2" />
+      <item itemvalue="JUnit.MySpringTest.board_user_test" />
+      <item itemvalue="JUnit.MySpringTest.std_club_test" />
+      <item itemvalue="JUnit.MySpringTest.user_test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.78" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.request | #2" />
+        <item itemvalue="HTTP Request.request | #1" />
+        <item itemvalue="JUnit.MySpringTest.board_user_test" />
+        <item itemvalue="JUnit.MySpringTest.std_club_test" />
+        <item itemvalue="JUnit.MySpringTest.user_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7e36fbb-9d60-4e8d-b477-c9af2027440f" name="Changes" comment="" />
+      <created>1691403279792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691403279792</updated>
+      <workItem from="1691403280835" duration="9826000" />
+      <workItem from="1691475490105" duration="269000" />
+      <workItem from="1691475792919" duration="10000" />
+      <workItem from="1691475846204" duration="1044000" />
+      <workItem from="1691488824212" duration="10863000" />
+      <workItem from="1691575710718" duration="9524000" />
+      <workItem from="1691586017930" duration="544000" />
+      <workItem from="1691662121410" duration="10594000" />
+      <workItem from="1691743233333" duration="1751000" />
+      <workItem from="1691748597264" duration="10472000" />
+      <workItem from="1691824868680" duration="372000" />
+      <workItem from="1691828680890" duration="500000" />
+      <workItem from="1691830915719" duration="156000" />
+      <workItem from="1691831383355" duration="742000" />
+      <workItem from="1691832348757" duration="31000" />
+      <workItem from="1692007378591" duration="9978000" />
+      <workItem from="1692079411425" duration="1861000" />
+      <workItem from="1692180255519" duration="11953000" />
+      <workItem from="1692252657028" duration="3704000" />
+      <workItem from="1692266561369" duration="9808000" />
+      <workItem from="1692347815664" duration="1204000" />
+      <workItem from="1692353917304" duration="403000" />
+      <workItem from="1692355699598" duration="1223000" />
+      <workItem from="1692361800332" duration="682000" />
+      <workItem from="1692598372781" duration="34000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SpringDBProejct$MySpringTest_user_test.ic" NAME="MySpringTest.user_test Coverage Results" MODIFIED="1691491326309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

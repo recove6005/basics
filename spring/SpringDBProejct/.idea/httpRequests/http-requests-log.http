@@ -1,0 +1,32 @@
+POST http://localhost:8080/comment/
+Content-Type: application/json
+Content-Length: 65
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "test-request",
+  "text": "This is test request."
+}
+
+###
+
+GET http://localhost:8080/comment/korea
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-17T201329.500.html
+
+###
+
+GET http://localhost:8080/comment
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-17T201122.200.json
+
+###
+
