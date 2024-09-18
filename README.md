@@ -1,4 +1,5 @@
 # Personal studies
 <p>
-  java, javascript, jsp, spring boot, mybatis, mysql
+  IntelliJ based on html, css, java, javascript, jsp, spring boot, mybatis, mysql
+  Android Studio based on Kotlin
 </p>
