@@ -1,13 +1,13 @@
 # Personal studies
 <p>
   IntelliJ based on 
-  html, css, 
-  java, javascript, jsp, spring boot, mybatis, mysql
+  html, css,
+  java, javascript, jsp, spring boot, mybatis, mysql 
 </p>
 
 <br>
 
 <p>
   Android Studio based on 
-  Kotlin
+  Kotlin, SQLite, Firebase
 </p>
